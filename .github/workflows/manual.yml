@@ -12,6 +12,6 @@ jobs:
         uses: actions/create-branch@v2
         with:
           branch-name: /feature/${{ github.issue.title }}
-          branch-base: master
+          branch-base: main
           description: "Branch criado para resolver a issue #${{ github.issue.number }}"
 
