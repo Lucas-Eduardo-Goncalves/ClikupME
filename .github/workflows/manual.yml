@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+      - name: Criar um branch
+        uses: actions/checkout@v2
       - name: Criar um branch personalizado
         run: |
           git checkout -b feature/${{ github.event.issue.title }} 
