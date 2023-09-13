@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Criar um novo branch
         run: |
-          git checkout -b feature/${{ github.event.issue.title }}
-          git push origin feature/${{ github.event.issue.title }}
+          git checkout -b feature/${{ github.issue.title }}
+          git push origin feature/${{ github.issue.title }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
