@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Criar um novo branch
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: { { secrets.GITHUB_TOKEN } }
         run: |
           git checkout -b feature
           git push origin feature
