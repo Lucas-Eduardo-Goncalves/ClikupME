@@ -14,7 +14,7 @@ jobs:
         run: |
           git checkout -b feature/${{ github.event.issue.title }}
           touch task.md
-          echo ${{ github.event.issue.body }} >> task.md
+          echo "${{ github.event.issue.body }}" >> task.md
           git config user.email "github@gmail.com"
           git config user.name "GitHub Action"
           git add .
