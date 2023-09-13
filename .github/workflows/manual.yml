@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Criar um branch
-        uses: actions/create-branch
+        uses: actions/create-branch@v2
         with:
           branch-name: /feature/${{ github.issue.title }}
           branch-base: main
