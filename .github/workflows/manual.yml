@@ -15,4 +15,4 @@ jobs:
           git checkout -b feature
           git push origin feature
         env:
-          GITHUB_TOKEN: 84ff92bfaa46b2e61c226280be7a46c884a01820
+          GITHUB_TOKEN: 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
