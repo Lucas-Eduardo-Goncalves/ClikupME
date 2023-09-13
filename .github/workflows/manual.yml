@@ -15,4 +15,6 @@ jobs:
           git checkout -b feature/${{ github.event.issue.title }}
           touch task.md
           echo ${{ github.event.issue.title }} >> task.md
+          git add .
+          git commit -m "Generate task.md with description ${{ github.event.issue.title }} by GITHUB_ACTION"
           git push origin feature/${{ github.event.issue.title }}
