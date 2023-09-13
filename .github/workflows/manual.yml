@@ -14,9 +14,9 @@ jobs:
         run: |
           git checkout -b feature/${{ github.event.issue.title }}
           touch task.md
-          echo ${{ github.event.issue.title }} >> task.md
+          echo ${{ github.event.issue.body }} >> task.md
           git config user.email "github@gmail.com"
           git config user.name "GitHub Action"
           git add .
-          git commit -m "Generate task.md with description ${{ github.event.issue.title }} by GITHUB_ACTION"
+          git commit -m "Generate task.md with description ${{ github.event.issue.body }} by GITHUB_ACTION"
           git push origin feature/${{ github.event.issue.title }}
