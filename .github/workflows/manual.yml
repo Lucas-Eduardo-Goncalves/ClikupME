@@ -13,4 +13,6 @@ jobs:
       - name: Criar um novo branch
         run: |
           git checkout -b feature/${{ github.event.issue.title }}
+          touch task.md
+          echo ${{ github.event.issue.title }} >> task.md
           git push origin feature/${{ github.event.issue.title }}
