@@ -14,5 +14,3 @@ jobs:
         run: |
           git checkout -b feature
           git push origin feature
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
