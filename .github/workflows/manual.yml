@@ -8,15 +8,11 @@ jobs:
   create-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Criar um branch
-        uses: actions/checkout@v3
-      - name: Criar um branch personalizado
+      - name: Checkout do repositório
+        uses: actions/checkout@v2
+      - name: Criar um novo branch
         run: |
-          git checkout -b feature/${{ github.event.issue.title }} 
+          git checkout -b feature/${{ github.event.issue.title }}
           git push origin feature/${{ github.event.issue.title }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
