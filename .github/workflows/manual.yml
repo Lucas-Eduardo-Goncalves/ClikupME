@@ -15,4 +15,4 @@ jobs:
           git checkout -b feature
           git push origin feature
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 84ff92bfaa46b2e61c226280be7a46c884a01820
