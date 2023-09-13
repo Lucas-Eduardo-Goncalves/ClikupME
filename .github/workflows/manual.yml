@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Criar um branch
-        uses: actions/create-branch@v2
-        with:
-          branch-name: /feature/${{ github.issue.title }}
-          branch-base: main
-          description: "Branch criado para resolver a issue #${{ github.issue.number }}"
-
+        uses: actions/checkout@v2
+      - name: Criar um branch personalizado
+        run: |
+          git checkout -b feature/${{ github.event.issue.title }} 
+          git push origin feature/${{ github.event.issue.title }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
